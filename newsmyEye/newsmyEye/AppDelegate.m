@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "WWLoginViewController.h"
 #import "WWGuideViewController.h"
+
+#import <SMS_SDK/SMSSDK.h>          // 短信
+
 @interface AppDelegate ()
 
 @end
@@ -25,23 +28,30 @@
     DDLogInfo(@"调试器加载成功!");
 #endif
     
-//    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"firstGuide"]) {
-//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstGuide"];
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"firstGuide"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstGuide"];
     
         WWGuideViewController *guideVC = [[WWGuideViewController alloc]init];
         [self.window setRootViewController:guideVC];
         
-//    }else{
-//        
-//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//        self.window.backgroundColor = [UIColor whiteColor];
-//        
-//        WWLoginViewController * login = [[WWLoginViewController alloc]init];
-//        //导航条创建
-//        self.navtionViewControl = [[UINavigationController alloc]initWithRootViewController:login];
-//        
-//        [self.window setRootViewController:self.navtionViewControl];
-//    }
+    }else{
+        
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.backgroundColor = [UIColor whiteColor];
+        
+        WWLoginViewController * login = [[WWLoginViewController alloc]init];
+        //导航条创建
+        self.navtionViewControl = [[UINavigationController alloc]initWithRootViewController:login];
+        
+        [self.window setRootViewController:self.navtionViewControl];
+    }
+    
+    /*
+     * 短信初始化
+     */
+    [SMSSDK registerApp:SMS_SDK_APPKEY
+             withSecret:SMS_SDK_APPSECRET];
+    
     
     [self.window makeKeyAndVisible];
     

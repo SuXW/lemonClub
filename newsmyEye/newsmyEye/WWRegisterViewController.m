@@ -213,7 +213,45 @@
 }
 
 - (void)submitClickEvent:(UIButton *)sender{
-    
+    if (VerifyCodeField.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入验证码"];
+        return;
+    }
+    if (pwdTextField.text.length == 0) {
+        if (self.is_register == YES) {
+            [SVProgressHUD showErrorWithStatus:@"请设置新密码"];
+        }else{
+            [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+        }
+        return;
+    }
+//    [SMSSDK commitVerificationCode:VerifyCodeField.text phoneNumber:phoneTextField.text zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+//        {
+//            if (!error){
+//                NSLog(@"验证成功");
+//                if (self.is_register == YES) {  // 找回密码
+//                    
+//                }else{      // 注册用户
+                    [self registerUser];
+//                }
+//            }else{
+//                NSLog(@"错误信息:%@",error);
+//            }
+//        }
+//    }];
+}
+
+- (void)registerUser{
+    [SVProgressHUD show];
+    NSMutableDictionary *dic = [WWUtilityClass getParametersDic:@"addRegister"];
+    [dic setObject:phoneTextField.text forKey:@"phone"];
+    [dic setObject:[WWUtilityClass md5HexDigest:[NSString stringWithFormat:@"%@%@",[WWUtilityClass md5HexDigest:pwdTextField.text],@"\"Lemon\""]] forKey:@"password"];
+    [RestManager requestWithJson:dic requestMethod:requestMethodPOST withUrl:@"" success:^(NSDictionary *responseDic) {
+        [SVProgressHUD dismiss];
+        WWLog(@"注册成功");
+    } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 
 - (void)phoneTextChange{
@@ -231,8 +269,33 @@
         [SVProgressHUD showErrorWithStatus:@"请输入正确手机号码"];
         return;
     }
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(passWorkTimerFireMethod:) userInfo:nil repeats:YES];
-    timerNum = 60;
+    [SVProgressHUD show];
+    /**
+     *  @from                    v1.1.1
+     *  @brief                   获取验证码(Get verification code)
+     *
+     *  @param method            获取验证码的方法(The method of getting verificationCode)
+     *  @param phoneNumber       电话号码(The phone number)
+     *  @param zone              区域号，不要加"+"号(Area code)
+     *  @param customIdentifier  自定义短信模板标识 该标识需从官网http://www.mob.com上申请，审核通过后获得。(Custom model of SMS.  The identifier can get it  from http://www.mob.com  when the application had approved)
+     *  @param result            请求结果回调(Results of the request)
+     */
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS
+                            phoneNumber:phoneTextField.text
+                                   zone:@"86"
+                       customIdentifier:nil
+                                 result:^(NSError *error) {
+                                     if (!error) {
+                                         NSLog(@"获取验证码成功");
+                                         [SVProgressHUD dismiss];
+                                         timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(passWorkTimerFireMethod:) userInfo:nil repeats:YES];
+                                         timerNum = 60;
+
+                                     } else {
+                                         [SVProgressHUD showErrorWithStatus:@"发送失败，请重新发送"];
+                                         NSLog(@"错误信息：%@",error);
+                                     }
+                                 }];
     
 }
 
@@ -241,6 +304,7 @@
         [passWordtimer invalidate];
         [self.codeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
         self.codeButton.userInteractionEnabled = YES;
+        [self.codeButton setBackgroundColor:RGBCOLOR(237, 200, 30)];
         
     }else{
         timerNum --;
@@ -266,14 +330,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

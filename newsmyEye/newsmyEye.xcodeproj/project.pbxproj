@@ -17,6 +17,8 @@
 		468C4E791D8596CD00A36781 /* WWMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468C4E781D8596CD00A36781 /* WWMyCollectionViewController.m */; };
 		468C4E7C1D85A0D300A36781 /* WWBlankPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 468C4E7B1D85A0D300A36781 /* WWBlankPageView.m */; };
 		468C4E801D85B27800A36781 /* SWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468C4E7F1D85B27800A36781 /* SWMessageViewController.m */; };
+		46A53B931E24DBB900684FCE /* RestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A53B921E24DBB900684FCE /* RestManager.m */; };
+		46A53B9A1E29F8FA00684FCE /* WWUtilityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A53B991E29F8FA00684FCE /* WWUtilityClass.m */; };
 		46CACEB11D8EF01400CA2092 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CACEB01D8EF01400CA2092 /* MessageTableViewCell.m */; };
 		46CACEB51D8EF86D00CA2092 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CACEB41D8EF86D00CA2092 /* MessageModel.m */; };
 		46CACEB91D91867A00CA2092 /* WWSetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CACEB81D91867A00CA2092 /* WWSetUpViewController.m */; };
@@ -40,6 +42,14 @@
 		46CACEF61D942AF700CA2092 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CACEEA1D942AF700CA2092 /* TZVideoPlayerController.m */; };
 		46CACEF71D942AF700CA2092 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CACEEC1D942AF700CA2092 /* UIView+Layout.m */; };
 		46CACEFA1D956AED00CA2092 /* WWMyUserTagListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CACEF91D956AED00CA2092 /* WWMyUserTagListViewController.m */; };
+		46E514F11E2C7146000FF154 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E514EE1E2C7146000FF154 /* MOBFoundation.framework */; };
+		46E514F21E2C7146000FF154 /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E514EF1E2C7146000FF154 /* MOBFoundationEx.framework */; };
+		46E514F31E2C7146000FF154 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E514F01E2C7146000FF154 /* SMS_SDK.framework */; };
+		46E514F51E2C717D000FF154 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E514F41E2C717D000FF154 /* libicucore.tbd */; };
+		46E514F71E2C7186000FF154 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E514F61E2C7186000FF154 /* MessageUI.framework */; };
+		46E514F91E2C718D000FF154 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E514F81E2C718D000FF154 /* JavaScriptCore.framework */; };
+		46E514FE1E2CA4B8000FF154 /* mykey_client.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 46E514FC1E2CA380000FF154 /* mykey_client.p12 */; };
+		46E514FF1E2CA4B8000FF154 /* mykey_server.cer in Resources */ = {isa = PBXBuildFile; fileRef = 46E514FD1E2CA380000FF154 /* mykey_server.cer */; };
 		4A7282C91D464688003AF94E /* WWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7282C81D464688003AF94E /* WWLoginViewController.m */; };
 		4A7282CD1D47AC91003AF94E /* WWHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7282CC1D47AC91003AF94E /* WWHomePageViewController.m */; };
 		4A7282DA1D47AE57003AF94E /* HyLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7282D01D47AE57003AF94E /* HyLoginButton.m */; };
@@ -119,6 +129,10 @@
 		468C4E7B1D85A0D300A36781 /* WWBlankPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWBlankPageView.m; sourceTree = "<group>"; };
 		468C4E7E1D85B27800A36781 /* SWMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWMessageViewController.h; sourceTree = "<group>"; };
 		468C4E7F1D85B27800A36781 /* SWMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWMessageViewController.m; sourceTree = "<group>"; };
+		46A53B911E24DBB900684FCE /* RestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestManager.h; sourceTree = "<group>"; };
+		46A53B921E24DBB900684FCE /* RestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestManager.m; sourceTree = "<group>"; };
+		46A53B981E29F8FA00684FCE /* WWUtilityClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWUtilityClass.h; sourceTree = "<group>"; };
+		46A53B991E29F8FA00684FCE /* WWUtilityClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWUtilityClass.m; sourceTree = "<group>"; };
 		46CACEAF1D8EF01400CA2092 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		46CACEB01D8EF01400CA2092 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		46CACEB31D8EF86D00CA2092 /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
@@ -164,6 +178,14 @@
 		46CACEEC1D942AF700CA2092 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		46CACEF81D956AED00CA2092 /* WWMyUserTagListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWMyUserTagListViewController.h; sourceTree = "<group>"; };
 		46CACEF91D956AED00CA2092 /* WWMyUserTagListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWMyUserTagListViewController.m; sourceTree = "<group>"; };
+		46E514EE1E2C7146000FF154 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		46E514EF1E2C7146000FF154 /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
+		46E514F01E2C7146000FF154 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		46E514F41E2C717D000FF154 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		46E514F61E2C7186000FF154 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		46E514F81E2C718D000FF154 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		46E514FC1E2CA380000FF154 /* mykey_client.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mykey_client.p12; sourceTree = "<group>"; };
+		46E514FD1E2CA380000FF154 /* mykey_server.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = mykey_server.cer; sourceTree = "<group>"; };
 		4A7282C71D464688003AF94E /* WWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWLoginViewController.h; sourceTree = "<group>"; };
 		4A7282C81D464688003AF94E /* WWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWLoginViewController.m; sourceTree = "<group>"; };
 		4A7282CB1D47AC91003AF94E /* WWHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWHomePageViewController.h; sourceTree = "<group>"; };
@@ -234,7 +256,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E514F91E2C718D000FF154 /* JavaScriptCore.framework in Frameworks */,
+				46E514F71E2C7186000FF154 /* MessageUI.framework in Frameworks */,
+				46E514F51E2C717D000FF154 /* libicucore.tbd in Frameworks */,
 				4A7283D71D6C9101003AF94E /* libz.tbd in Frameworks */,
+				46E514F11E2C7146000FF154 /* MOBFoundation.framework in Frameworks */,
+				46E514F31E2C7146000FF154 /* SMS_SDK.framework in Frameworks */,
 				4A7283D51D6C90FA003AF94E /* CoreGraphics.framework in Frameworks */,
 				4A7283D31D6C90F2003AF94E /* libstdc++.tbd in Frameworks */,
 				4A7283D11D6C90E7003AF94E /* CoreTelephony.framework in Frameworks */,
@@ -244,6 +271,7 @@
 				4A7283C91D6C90BD003AF94E /* Security.framework in Frameworks */,
 				AABC4721A5A3011705519855 /* libPods.a in Frameworks */,
 				4A7282EF1D6C8C8F003AF94E /* TencentOpenAPI.framework in Frameworks */,
+				46E514F21E2C7146000FF154 /* MOBFoundationEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +353,15 @@
 				468C4E7F1D85B27800A36781 /* SWMessageViewController.m */,
 			);
 			name = "消息";
+			sourceTree = "<group>";
+		};
+		46A53B901E24DBA600684FCE /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				46A53B911E24DBB900684FCE /* RestManager.h */,
+				46A53B921E24DBB900684FCE /* RestManager.m */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		46CACEB21D8EF02600CA2092 /* 消息 */ = {
@@ -415,6 +452,16 @@
 				46CACEEC1D942AF700CA2092 /* UIView+Layout.m */,
 			);
 			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		46E514ED1E2C7146000FF154 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				46E514EE1E2C7146000FF154 /* MOBFoundation.framework */,
+				46E514EF1E2C7146000FF154 /* MOBFoundationEx.framework */,
+				46E514F01E2C7146000FF154 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
 		4A7282CA1D47AC7F003AF94E /* 首页 */ = {
@@ -511,6 +558,7 @@
 				4DE12E701D2A4BE30097B3EC /* Categories */,
 				4DE12E6E1D2A4B940097B3EC /* Module */,
 				4DE12E6D1D2A4B8D0097B3EC /* Utils */,
+				46A53B901E24DBA600684FCE /* NetWork */,
 				4DE12E6C1D2A4B540097B3EC /* Config */,
 				4DE12E6F1D2A4BB10097B3EC /* ApplicationDelegate */,
 				4DE126531D2A472E0097B3EC /* Supporting Files */,
@@ -527,6 +575,8 @@
 				4DE126611D2A472E0097B3EC /* LaunchScreen.storyboard */,
 				4DE126641D2A472E0097B3EC /* Info.plist */,
 				4DE126541D2A472E0097B3EC /* main.m */,
+				46E514FC1E2CA380000FF154 /* mykey_client.p12 */,
+				46E514FD1E2CA380000FF154 /* mykey_server.cer */,
 				4DE12E841D2A5C030097B3EC /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -566,6 +616,8 @@
 			children = (
 				4DE12E7B1D2A5B2F0097B3EC /* UIViewController+AOP.h */,
 				4DE12E7C1D2A5B2F0097B3EC /* UIViewController+AOP.m */,
+				46A53B981E29F8FA00684FCE /* WWUtilityClass.h */,
+				46A53B991E29F8FA00684FCE /* WWUtilityClass.m */,
 				4DE12E8A1D2A5E560097B3EC /* SqliteConfig.h */,
 				4DE12E8B1D2A5E560097B3EC /* SqliteConfig.m */,
 				4DE12E8C1D2A5E560097B3EC /* SqliteOperationsUtil.h */,
@@ -606,6 +658,7 @@
 		4DE12E711D2A4BF90097B3EC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				46E514ED1E2C7146000FF154 /* SMS_SDK */,
 				46CACED71D942AF700CA2092 /* TZImagePickerController */,
 				4667A3461D856CE9003EED53 /* SphereView */,
 				4A7282EB1D6C8C81003AF94E /* QQ */,
@@ -643,6 +696,9 @@
 		B6B2DC1EB20C8D0E6C12FD02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46E514F81E2C718D000FF154 /* JavaScriptCore.framework */,
+				46E514F61E2C7186000FF154 /* MessageUI.framework */,
+				46E514F41E2C717D000FF154 /* libicucore.tbd */,
 				4A7283D61D6C9101003AF94E /* libz.tbd */,
 				4A7283D41D6C90FA003AF94E /* CoreGraphics.framework */,
 				4A7283D21D6C90F2003AF94E /* libstdc++.tbd */,
@@ -773,6 +829,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E514FE1E2CA4B8000FF154 /* mykey_client.p12 in Resources */,
+				46E514FF1E2CA4B8000FF154 /* mykey_server.cer in Resources */,
 				4DE126631D2A472E0097B3EC /* LaunchScreen.storyboard in Resources */,
 				4DE12E821D2A5C030097B3EC /* Localizable.strings in Resources */,
 				4DE126601D2A472E0097B3EC /* Assets.xcassets in Resources */,
@@ -860,10 +918,12 @@
 				4A7282CD1D47AC91003AF94E /* WWHomePageViewController.m in Sources */,
 				46CACEEE1D942AF700CA2092 /* TZAssetCell.m in Sources */,
 				4667A3581D856DAD003EED53 /* WWUserTagViewController.m in Sources */,
+				46A53B9A1E29F8FA00684FCE /* WWUtilityClass.m in Sources */,
 				46CACEED1D942AF700CA2092 /* NSBundle+TZImagePicker.m in Sources */,
 				46CACEF01D942AF700CA2092 /* TZImageManager.m in Sources */,
 				4A7282E31D575D0E003AF94E /* WWLeftMenuView.m in Sources */,
 				4A7282DC1D47AE57003AF94E /* HySpinerLayer.m in Sources */,
+				46A53B931E24DBB900684FCE /* RestManager.m in Sources */,
 				4A7282C91D464688003AF94E /* WWLoginViewController.m in Sources */,
 				46CACEBD1D91966F00CA2092 /* WWFeedbackViewController.m in Sources */,
 				46CACEF41D942AF700CA2092 /* TZPhotoPreviewCell.m in Sources */,
@@ -1059,6 +1119,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/newsmyEye",
+					"$(PROJECT_DIR)/newsmyEye/SMS_SDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newsmyEye/WWProject.pch";
@@ -1084,6 +1145,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/newsmyEye",
+					"$(PROJECT_DIR)/newsmyEye/SMS_SDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newsmyEye/WWProject.pch";

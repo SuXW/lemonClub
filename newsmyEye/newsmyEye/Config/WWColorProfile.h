@@ -6,6 +6,57 @@
 //  Copyright © 2016年 newsmy. All rights reserved.
 //
 
+
+//打印命令--请务必使用此命令
+#ifdef DEBUG
+# define WWLog(format, ...) NSLog((@"[文件名:%s]" "[函数名:%s]" "[行号:%d]\n" format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define WWLog(...);
+#endif
+
+#define StringAppend(value)     [NSString stringWithFormat:@"%@",value]
+
+//获取网络情况
+#define NETWORK [Reachability getNetworkTypeFromStatusBar]
+
+//获取设备机型
+#define _DEVICE_SYSTEM_MODEL_ [Reachability platformType]
+
+//获取设备的devicetoken
+#define _DEVICE_TOKEN_ [Reachability getDeviceToken]
+
+//获取当前用户的id
+#define _DEVICE_USERID [Reachability getShareUserId]
+//系统版本号
+#define _DEVICE_SYSTEM_VERSION_  [[[UIDevice currentDevice] systemVersion]floatValue]
+#define _DEVICE_SYSTEM_NAME_  [[UIDevice currentDevice] systemName] //设备名称
+//系统版本号
+#define VersionLargerThan5  ([[[UIDevice currentDevice] systemVersion] floatValue] >=5.0)
+#define VersionLargerThan6  ([[[UIDevice currentDevice] systemVersion] floatValue] >=6.0)
+#define VersionLargerThan7  ([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0)
+#define VersionLargerThan8  ([[[UIDevice currentDevice] systemVersion] floatValue] >=8.0)
+
+#define Version5  ([[[UIDevice currentDevice] systemVersion] floatValue] ==5.0)
+#define Version6  ([[[UIDevice currentDevice] systemVersion] floatValue] ==6.0)
+#define Version7  ([[[UIDevice currentDevice] systemVersion] floatValue] ==7.0)
+#define Version8  ([[[UIDevice currentDevice] systemVersion] floatValue] ==8.0)
+
+//获取设备
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6_Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_
+
+//如果为ios7，则返回20的冗余
+#ifndef IOS7_Y
+#define IOS7_Y              ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0?20:0)
+#endif
+
 #ifndef WWColorProfile_h
 #define WWColorProfile_h
 
@@ -22,6 +73,7 @@
 //rpg颜色宏
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
+#define KUIImageViewDefaultImage        createImageWithColor(KUIImageViewDefaultColor)
 
 //转RGB颜色值
 #define UIColorFromRGB(rgbValue) [UIColor \
